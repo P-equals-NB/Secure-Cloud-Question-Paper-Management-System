@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Cloud Question-Paper Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Secure Cloud Question-Paper Management System</h1>
+    <p>Simple client-side prototype for secure question-paper creation, review, approval and controlled release.</p>
+  </header>
+
+  <main>
+    <section id="loginPage" class="card login-card">
+      <h2>Secure Authentication</h2>
+      <p class="muted">Demo login: choose a role and enter any password.</p>
+      <label for="role">Role</label>
+      <select id="role">
+        <option>Question Setter</option>
+        <option>Reviewer</option>
+        <option>Approving Authority</option>
+      </select>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter password">
+      <button id="loginBtn">Login with MFA Simulation</button>
+      <p id="loginMsg" class="message"></p>
+    </section>
+
+    <section id="appPage" class="hidden">
+      <div class="topbar">
+        <div>
+          <strong id="userRole"></strong>
+          <span class="muted"> | Secure Session</span>
+        </div>
+        <button id="logoutBtn" class="secondary">Logout</button>
+      </div>
+
+      <div class="grid">
+        <section class="card" id="createCard">
+          <h2>Create Question Paper</h2>
+          <label>Subject</label>
+          <input id="subject" placeholder="e.g. Cloud Computing">
+          <label>Exam</label>
+          <input id="exam" placeholder="e.g. Internal Assessment">
+          <label>Questions</label>
+          <textarea id="questions" rows="7" placeholder="Enter questions, one per line"></textarea>
+          <button id="createBtn">Create & Encrypt</button>
+          <p id="createMsg" class="message"></p>
+        </section>
+
+        <section class="card">
+          <h2>Question Papers</h2>
+          <div id="paperList"></div>
+        </section>
+
+        <section class="card">
+          <h2>Controlled Release</h2>
+          <label>Select Paper</label>
+          <select id="releasePaper"></select>
+          <label>Release Time</label>
+          <input id="releaseTime" type="datetime-local">
+          <button id="releaseBtn">Set Time Lock</button>
+          <p id="releaseMsg" class="message"></p>
+        </section>
+
+        <section class="card">
+          <h2>Monitoring & Audit</h2>
+          <div id="auditList"></div>
+          <button id="clearBtn" class="danger">Clear Demo Data</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>AES-256-GCM simulation</span> · <span>SHA-256 integrity</span> · <span>RBAC</span> · <span>Audit logs</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

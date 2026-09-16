@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #f3f4f6;
+}
+
+header {
+  text-align: center;
+  padding: 28px 16px 18px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+header p {
+  margin: 0;
+  color: #aeb8c7;
+}
+
+main {
+  width: min(1100px, 94%);
+  margin: 0 auto 30px;
+}
+
+.card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.18);
+}
+
+.login-card {
+  max-width: 430px;
+  margin: 35px auto;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 19px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  color: #d1d5db;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  background: #111827;
+  color: #fff;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 14px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+button.secondary {
+  background: #4b5563;
+  margin-top: 0;
+}
+
+button.danger {
+  background: #b91c1c;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  background: #172033;
+  border-radius: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.paper {
+  border: 1px solid #465166;
+  border-radius: 7px;
+  padding: 13px;
+  margin-bottom: 12px;
+}
+
+.paper h3 {
+  margin: 0 0 7px;
+}
+
+.paper p {
+  margin: 5px 0;
+  color: #c6ced9;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: #374151;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.badge.approved {
+  background: #166534;
+}
+
+.badge.review {
+  background: #92400e;
+}
+
+.badge.released {
+  background: #1d4ed8;
+}
+
+.actions button {
+  margin-right: 5px;
+}
+
+.message {
+  min-height: 18px;
+  color: #93c5fd;
+  font-size: 14px;
+}
+
+.muted {
+  color: #9ca3af;
+}
+
+.audit {
+  padding: 8px 0;
+  border-bottom: 1px solid #374151;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: #8f9bad;
+  padding: 10px 15px 25px;
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+}
